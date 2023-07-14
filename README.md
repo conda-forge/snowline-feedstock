@@ -1,11 +1,11 @@
-About snowline
-==============
+About snowline-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/snowline-feedstock/blob/main/LICENSE.txt)
 
 Home: https://johannesbuchner.github.io/snowline/
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/snowline-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fit and compare models very quickly. MCMC-free.
 
