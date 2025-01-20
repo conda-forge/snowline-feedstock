@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: dd1eeb23300b68a9c9171851e4daef98b676d02f90f5d304c06d1ccc53f5471a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - pytest-runner
     - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - numpy
     - scipy
     - pypmc
@@ -39,6 +39,7 @@ test:
     - pytest >=3
     - pip
     - openssh   # see https://github.com/open-mpi/ompi/issues/3625
+    - python {{ python_min }}
   commands:
     - pip check
     - pytest -sxv tests/
